@@ -1,0 +1,120 @@
+AI PROMPT HISTORY
+=================
+
+Tool: Claude
+
+Prompt 1:
+I have attached the complete development brief for my frontend assessment.
+
+Please read the entire brief carefully before making any changes. Treat the attached brief as the source of truth and follow all requirements exactly.
+
+This is a 4-hour job assessment, so do not add unnecessary features or over-engineer the solution. I need a clean, production-quality implementation that satisfies the assessment requirements.
+
+The Next.js project has already been created and is running successfully. Inspect the existing project before proposing any changes.
+
+Important:
+- Follow the required technology stack in the brief.
+- Follow the required architecture and separation of concerns.
+- Implement all four required order tracking business states.
+- Use shared, data-driven components rather than separate pages for each state.
+- Include the required mock API/data layer.
+- Include the required client-side caching/fetching mechanism.
+- Include proper skeleton loading, fetch error with retry, and invalid-order/not-found states.
+- Follow the mobile-first 360–430px requirement.
+- Follow the accessibility and performance requirements.
+- Follow the visual direction carefully and avoid generic AI-looking design.
+- Keep TypeScript strict and do not use `any`.
+- Do not build anything outside the scope of the assessment.
+- Do not remove or weaken requirements from the brief.
+
+For now, DO NOT write or modify any code.
+
+First:
+1. Read the complete brief.
+2. Inspect the existing project.
+3. Give me a concise implementation plan.
+4. Tell me exactly which packages need to be installed.
+5. Show the proposed file/folder structure.
+6. Confirm how each requirement and each order state will be handled.
+
+Wait for my confirmation before implementing anything.
+
+Prompt: 2
+The third option applies.
+
+This is a fresh create-next-app scaffold with no assessment-specific implementation yet.
+
+It was created using create-next-app@16.3.6 with the recommended defaults:
+
+- Next.js 16.3.6
+- App Router
+- TypeScript
+- Tailwind CSS
+- ESLint
+- No React Compiler
+- No src/ directory
+- npm
+- Git initialized
+
+The project runs successfully with npm run dev at localhost:3000.
+
+HeroUI and TanStack Query have NOT been installed or configured yet.
+
+There is no meaningful application code to preserve, so treat this as a fresh scaffold and plan the implementation according to the attached development brief.
+
+Important: the brief shows a /src structure, but because this scaffold was created without a src directory, you may either reorganize it to match the brief or use an equivalent clean structure, as long as all architectural requirements and separation of concerns are preserved.
+
+Now continue with the requested planning phase only:
+
+1. Give me the concise implementation plan.
+2. Tell me exactly which packages need to be installed.
+3. Show the proposed file/folder structure.
+4. Confirm how all four business states will be implemented.
+5. Confirm how loading, fetch error/retry, invalid order, caching, responsiveness, accessibility, and required interactions will be handled.
+
+Do not write or modify code yet. Wait for my confirmation before implementation.
+
+Prompt : 3
+The plan is approved with the following corrections before implementation:
+
+1. Do not unnecessarily downgrade Tailwind CSS just to force an older HeroUI setup. Use the current stable HeroUI setup that is compatible with the existing Next.js/Tailwind project. Keep dependency/configuration changes minimal and stable for this 4-hour assessment.
+
+2. Use these clear sample order IDs consistently:
+   - ORD-1001 → Happy Path
+   - ORD-1002 → Delayed
+   - ORD-1003 → Delivered But Not Received
+   - ORD-1004 → Tracking Not Available Yet
+
+3. Also implement a meaningful "View Order Details" interaction. It can use a HeroUI modal/drawer or another simple accessible interaction and should show useful order information. Do not build a separate order-details page.
+
+4. Keep Contact Support and Report Not Received as real working mock interactions, not decorative buttons.
+
+5. Preserve the distinction between:
+   - fetch/network error
+   - invalid/nonexistent order
+   - business states such as delayed or pending tracking
+
+Now proceed with the implementation.
+
+Work systematically and keep the implementation strictly within the attached assessment brief. Do not add unrelated features or over-engineer the project.
+
+Since you cannot directly edit my local project, provide the implementation in a practical file-by-file format that I can apply to my existing fresh Next.js project.
+
+For each step:
+- tell me exactly which command I need to run, if any
+- give the exact file path
+- provide the complete file content when a file must be created or replaced
+- do not omit imports
+- do not use placeholders such as "rest of code here"
+- do not use `any`
+- keep TypeScript strict
+- ensure imports and file paths are internally consistent
+
+Start with the exact package installation command and project structure changes, then proceed through the implementation in the correct dependency order.
+
+At the end, provide the exact commands for:
+- running the project
+- linting
+- production build
+
+Also provide a final checklist showing which assessment requirements have been implemented.
